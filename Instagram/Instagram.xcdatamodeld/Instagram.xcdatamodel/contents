@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CommentsTable" representedClassName="CommentsTable" syncable="YES" codeGenerationType="class">
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="PostTable" representedClassName="PostTable" syncable="YES" codeGenerationType="class">
+        <attribute name="postID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postPic" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="postProfilePic" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="postUserName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="commentRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CommentsTable" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PostTable" positionX="-47" positionY="-15" width="128" height="118"/>
+        <element name="CommentsTable" positionX="207" positionY="17" width="128" height="73"/>
+    </elements>
 </model>
